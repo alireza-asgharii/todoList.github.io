@@ -9,8 +9,8 @@ body {
 }
 
 .todoInput {
-  width: 200px;
-  padding: 10px;
+  width: 280px;
+  padding: 11px;
   position: fixed;
   text-align: center;
   bottom: 20px;
@@ -19,5 +19,8 @@ body {
   border: none;
   border-radius: 10px;
   outline: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.043),
+  0 6px 18px rgba(0, 0, 0, 0.116);
 
 }

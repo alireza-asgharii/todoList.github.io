@@ -10,17 +10,41 @@ body {
 
 .todoInput {
   width: 280px;
-  padding: 11px;
-  position: fixed;
+  padding: 14px;
   text-align: center;
-  bottom: 20px;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 8px rgba(49, 49, 49, 0.043),
+  0 6px 18px rgba(57, 56, 56, 0.116);
+}
+
+.todoSection {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: none;
-  border-radius: 10px;
-  outline: none;
-  font-size: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.043),
-  0 6px 18px rgba(0, 0, 0, 0.116);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.addTodo {
+  width: 20px;
+  padding: 16px 20px;
+  border: none;
+  margin-left: 10px;
+  text-align: center;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fa-plus {
+  color: black;
+  display: inline-block;
 }

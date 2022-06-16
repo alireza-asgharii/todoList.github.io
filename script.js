@@ -33,13 +33,15 @@ function todoHandler() {
   }
 }
 
-button.addEventListener("click", () => {
+button.addEventListener("click", (e) => {
   todoHandler();
+  e.preventDefault();
 });
 
 window.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     todoHandler();
+    e.preventDefault();
   }
 });
 

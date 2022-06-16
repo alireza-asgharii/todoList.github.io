@@ -96,6 +96,10 @@ body {
   line-height: 30px;
 }
 
+.fa-check {
+  display: none;
+}
+
 .doneTodoShow {
   animation: doneTodoShow ease .4s forwards;
 }
@@ -133,19 +137,40 @@ body {
 }
 
 .deleteTodoShow {
-  animation: deleteshow linear .4s forwards;
+  animation: scale-display--reversed linear .4s forwards;
 }
 
+
+
 @keyframes deleteshow {
-  0% {
-    left: 20%;
-  }
+  
   50% {
     left: 60%;
   }
   100% {
-    left: 100%;
     display: none;
+    left: 100%;
   }
+}
+
+@keyframes scale-display--reversed {
+	0% {
+		display: inline-flex;
+		opacity: 1;
+		transform: scale(1);
+		-webkit-transform: scale(1);
+	}
+	99% {
+		display: inline-flex;
+		opacity: 0;
+		transform: scale(0);
+		-webkit-transform: scale(0);
+	}
+	100% {
+		display: none;
+		opacity: 0;
+		transform: scale(0);
+		-webkit-transform: scale(0);
+	}
 }
 

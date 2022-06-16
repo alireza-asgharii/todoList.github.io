@@ -35,7 +35,7 @@ body {
 .addTodo {
   border: none;
   width: fit-content;
-  padding: 16px;
+  padding: 14px 16px;
   border: none;
   margin-left: 10px;
   text-align: center;
@@ -170,7 +170,7 @@ body {
 
 
 @media screen and (max-width: 550px) {
-  body {
-    cursor: none;
+  body, .addTodo, .deleteTodo, .doneTodo, .done {
+    cursor: auto;
   }
 }

@@ -83,15 +83,45 @@ body {
 }
 
 .doneTodo {
+  background: #DFDFDE;
+  border-radius: 8px;
   margin-left: 8px;
 }
 
 .fa-check {
-  padding: 10px;
-  background: #DFDFDE;
+  padding: 6px 8px;
   cursor: pointer;
-  border-radius: 8px;
+  opacity: 0;
 }
+
+.doneKey {
+  animation: doneKey ease .4s forwards;
+  transition: all ease .4s;
+}
+
+@keyframes doneKey {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.doneKeyBack {
+  animation: doneKeyBack ease .4s forwards;
+  transition: all ease .4s;
+}
+
+@keyframes doneKeyBack {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 
 .doneTodoShow {
   animation: doneTodoShow ease .4s forwards;
@@ -127,6 +157,7 @@ body {
   font-size: 1.2rem;
   background: none;
   cursor: pointer;
+  opacity: .6;
 }
 
 .deleteTodoShow {
@@ -170,7 +201,7 @@ body {
 
 
 @media screen and (max-width: 550px) {
-  body, .addTodo, .deleteTodo, .doneTodo, .done {
+  body, .addTodo, .deleteTodo, .doneTodo, .fa-check {
     cursor: default;
   }
 }

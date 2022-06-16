@@ -171,6 +171,6 @@ body {
 
 @media screen and (max-width: 550px) {
   body, .addTodo, .deleteTodo, .doneTodo, .done {
-    cursor: auto;
+    cursor: none;
   }
 }

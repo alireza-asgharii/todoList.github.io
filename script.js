@@ -5,6 +5,7 @@ const todoList = document.querySelector(".todoList");
 const doneTodo = document.querySelector(".doneTodo");
 const faCheck = document.querySelector('.fa-check');
 
+let click = false;
 
 function todoHandler() {
   let inputValue = input.value;
@@ -47,8 +48,31 @@ window.addEventListener("keydown", (e) => {
 
 todoList.addEventListener("click", (e) => {
   console.log(e.target);
+
   if (e.target.classList.contains('fa-check')) {
-    e.target.parentElement.parentElement.classList.toggle('doneTodoShow');
+    
+    // if (click === false) {
+    //   e.target.classList.remove('doneKeyBack');
+    //   e.target.classList.add('doneKey');
+    //   e.target.parentElement.parentElement.classList.add('doneTodoShow');
+    // } else if (click === true) {
+    //   e.target.classList.remove('doneKey');
+    //   e.target.classList.add('doneKeyBack');
+    //   e.target.parentElement.parentElement.classList.remove('doneTodoShow');
+    // }
+    
+    // click = !(click);
+    e.target.classList.toggle('doneKey');
+    if (e.target.classList.contains('doneKey')) {
+      e.target.parentElement.parentElement.classList.add('doneTodoShow');
+      e.target.parentElement.parentElement.classList.remove('doneTodoBack');
+    } else if (!(e.target.classList.contains('doneKey'))) {
+      e.target.parentElement.parentElement.classList.remove('doneTodoShow');
+      e.target.parentElement.parentElement.classList.add('doneTodoBack');
+    }
+    
+    
+
   } else if (e.target.classList.contains('fa-trash-can')) {
     e.target.parentElement.parentNode.classList.add('deleteTodoShow');
     setTimeout(() => {e.target.parentElement.parentElement.remove()}, 400)

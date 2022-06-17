@@ -206,12 +206,13 @@ body {
   top: 30px;
   left: 50%;
   transform: translate(-50%, -200%);
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   justify-content: center;
   background: #FAF5E4;
   padding: 10px;
-  min-width: 220px;
+  width: 220px;
   height: 40px;
   border-radius: 10px;
   line-height: 20px;

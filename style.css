@@ -58,6 +58,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   margin-top: 100px;
+  transition: all linear .2s;
 }
 
 .todo {
@@ -70,6 +71,7 @@ body {
   align-items: center;
   position: relative;
   margin-top: 15px;
+  transition: all linear .4s;
 }
 
 .todoListInput {
@@ -80,6 +82,7 @@ body {
   background: none;
   outline: none;
   font-size: 1.4rem;
+  /* text-decoration: line-through; */
 }
 
 .doneTodo {
@@ -161,7 +164,7 @@ body {
 }
 
 .deleteTodoShow {
-  animation: scale-display--reversed linear .4s forwards;
+  animation: scale-display--reversed linear .2s forwards;
 }
 
 

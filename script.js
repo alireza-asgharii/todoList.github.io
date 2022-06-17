@@ -136,8 +136,10 @@ window.addEventListener("load", () => {
 todoList.addEventListener("click", (e) => {
   if (e.target.className === "todoListInput") {
     let lastValue = e.target.value;
-    document.addEventListener("mousemove", () => {
-      saveChangeLocal(lastValue);
+    e.target.addEventListener("keydown", () => {
+      setTimeout(() => saveChangeLocal(lastValue), 2000);
+      setTimeout(() => saveChangeLocal(lastValue), 1000);
+      setTimeout(() => saveChangeLocal(lastValue), 500);
     });
     e.target.addEventListener("change", () => {
       saveChangeLocal(lastValue);
@@ -146,7 +148,6 @@ todoList.addEventListener("click", (e) => {
 
   function saveChangeLocal(lastValue) {
     let newValue = e.target.value;
-    console.log(newValue);
     let todos = JSON.parse(localStorage.getItem("todos"));
     let indexTodo = todos.indexOf(lastValue);
     todos[indexTodo] = newValue;
@@ -228,6 +229,7 @@ function addFromCompleteArr() {
     const newInput = document.createElement("input");
     newInput.classList.add("todoListInput");
     newInput.value = item;
+    newInput.style.textDecoration = 'line-through'
     todo.appendChild(newInput);
 
     const trashDiv = document.createElement("button");

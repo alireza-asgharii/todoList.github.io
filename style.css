@@ -210,8 +210,9 @@ body {
   align-items: center;
   justify-content: center;
   background: #FAF5E4;
-  padding: 20px;
+  padding: 10px;
   min-width: 220px;
+  height: 40px;
   border-radius: 10px;
   line-height: 20px;
 

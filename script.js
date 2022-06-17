@@ -4,6 +4,7 @@ const todoInput = document.querySelector(".todoListInput");
 const todoList = document.querySelector(".todoList");
 const doneTodo = document.querySelector(".doneTodo");
 const faCheck = document.querySelector(".fa-check");
+const msg = document.querySelector(".msg");
 
 let click = false;
 
@@ -13,8 +14,14 @@ function todoHandler() {
     addTodo(inputValue);
     saveLocal(input.value);
     input.value = "";
+  } else {
+    msg.classList.add("msgShow");
+    setTimeout(() => {
+    msg.classList.remove("msgShow");
+    }, 1300)
   }
 }
+
 
 function addTodo(inputValue) {
   const todo = document.createElement("div");
@@ -136,7 +143,7 @@ todoList.addEventListener("click", (e) => {
       saveChangeLocal(lastValue);
     });
   }
-  
+
   function saveChangeLocal(lastValue) {
     let newValue = e.target.value;
     console.log(newValue);
@@ -234,9 +241,9 @@ function addFromCompleteArr() {
 
 function removeComplete(todo) {
   let completeTodos;
-  completeTodos = JSON.parse(localStorage.getItem('completeTodos'));
+  completeTodos = JSON.parse(localStorage.getItem("completeTodos"));
   if (completeTodos.indexOf(todo.value) !== -1) {
     completeTodos.splice(completeTodos.indexOf(todo.value), 1);
   }
-  localStorage.setItem('completeTodos', JSON.stringify(completeTodos))
+  localStorage.setItem("completeTodos", JSON.stringify(completeTodos));
 }

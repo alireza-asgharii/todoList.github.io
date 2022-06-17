@@ -201,6 +201,55 @@ body {
 	}
 }
 
+.msg {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, -200%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FAF5E4;
+  padding: 20px;
+  min-width: 210px;
+  border-radius: 10px;
+  line-height: 20px;
+
+}
+
+.msg i {
+  margin-right: 8px;
+  color: #FF6363;
+  font-size: 1.1rem;
+  text-shadow: 0 0 13px #ff63639e;
+}
+
+.msg p {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.msgShow {
+  animation: msgShow ease 1.3s forwards;
+}
+
+
+
+@keyframes msgShow {
+  0% {
+    transform: translate(-50%, -200%);
+  }
+  20% {
+    transform: translate(-50%, 0);
+  }
+  90% {
+    transform: translate(-50%, 0);
+  }
+  100% {
+    transform: translate(-50%, -200%);
+  }
+}
+
 
 
 @media screen and (max-width: 550px) {
